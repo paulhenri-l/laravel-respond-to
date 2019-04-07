@@ -2,6 +2,13 @@
     "name": "paulhenri-l/laravel-respond-to",
     "description": "Provide rails like respond_to functionality to Laravel",
     "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "paulhenri-l",
+            "email": "25308170+paulhenri-l@users.noreply.github.com"
+        }
+    ],
     "require": {
         "laravel/framework": "^5.8"
     },
@@ -9,11 +16,14 @@
         "orchestra/testbench": "^3.8",
         "phpunit/phpunit": "^8.1"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "paulhenri-l",
-            "email": "25308170+paulhenri-l@users.noreply.github.com"
+    "autoload": {
+        "psr-4": {
+            "PHL\\LaravelRespondTo\\": "src/"
         }
-    ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHL\\LaravelRespondTo\\Tests\\": "tests/"
+        }
+    }
 }
