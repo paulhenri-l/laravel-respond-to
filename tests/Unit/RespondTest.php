@@ -2,7 +2,6 @@
 
 namespace PHL\LaravelRespondTo\Tests\Unit;
 
-use Illuminate\Http\Request;
 use PHL\LaravelRespondTo\Exceptions\MissingWithException;
 use PHL\LaravelRespondTo\Exceptions\NotSupportedFormatException;
 use PHL\LaravelRespondTo\Tests\TestCase;
@@ -35,7 +34,7 @@ class RespondTest extends TestCase
 
     public function test_get_with_pdf_and_responsable()
     {
-        Request::createFromGlobals()->setFormat('pdf', 'text/csv');
+        request()->setFormat('csv', 'text/csv');
 
         $response = $this->get('/', ['Accept' => 'text/csv']);
 

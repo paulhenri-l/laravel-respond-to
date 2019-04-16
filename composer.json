@@ -1,5 +1,5 @@
 {
-    "name": "paulhenri-l/laravel-respond-to",
+    "name": "phl/laravel-respond-to",
     "description": "Provide rails like respond_to functionality to Laravel",
     "type": "library",
     "license": "MIT",

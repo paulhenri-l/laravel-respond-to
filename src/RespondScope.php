@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use PHL\LaravelRespondTo\Exceptions\MissingWithException;
 use PHL\LaravelRespondTo\Exceptions\NotSupportedFormatException;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class RespondScope implements Responsable
 {
@@ -49,8 +50,11 @@ class RespondScope implements Responsable
 
     /**
      * Respond to the current format with the given responsable, callable or data.
+     *
+     * @param Response|SymfonyResponse|Responsable|callable|mixed $response
+     * @return RespondScope
      */
-    public function with($response = null)
+    public function with($response = null): RespondScope
     {
         $this->formats[$this->currentFormat] = $response;
 
