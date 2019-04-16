@@ -37,8 +37,8 @@ class MyController
 This controller is now able to respond to `html`, `json` and `txt` requests with
 different responses.
 
-**Each call to the `to` function must be followed by a `with` or `withView`
-call.**
+*Each call to the `to` function must be followed by a `with` or `withView`
+call.*
 
 ### Default format
 
