@@ -1,5 +1,7 @@
 # Laravel RespondTo
 
+![Travis](https://api.travis-ci.org/paulhenri-l/laravel-respond-to.svg?branch=master)
+
 This library will provide you with rails like `respond_to` functionality. This
 feature allows a controller action to return different responses according to
 the request `Accept` header (the format).
@@ -34,8 +36,8 @@ class MyController
 }
 ```
 
-This controller is now able to respond to `html`, `json` and `txt` requests with
-different responses.
+This controller is now able to respond to different formats with different 
+responses.
 
 *Each call to the `to` function must be followed by a `with` or `withView`
 call.*
