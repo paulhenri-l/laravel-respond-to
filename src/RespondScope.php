@@ -50,7 +50,7 @@ class RespondScope implements Responsable
     /**
      * Respond to the current format with the given responsable, callable or data.
      */
-    public function with(?$response = null)
+    public function with($response = null)
     {
         $this->formats[$this->currentFormat] = $response;
 
@@ -95,7 +95,9 @@ class RespondScope implements Responsable
             return $response->toResponse($request);
         }
 
-        // Check if callable too. If necessary.
+        if (is_callable($response)) {
+            return $response();
+        }
 
         return $response;
     }
@@ -105,10 +107,6 @@ class RespondScope implements Responsable
      */
     protected function setCurrentFormat(?string $format): void
     {
-        if (!$format) {
-            return;
-        }
-
         $this->formats[$format] = static::NOT_SET;
         $this->currentFormat = $format;
     }
