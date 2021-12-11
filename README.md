@@ -1,6 +1,6 @@
 # Laravel RespondTo
 
-![Travis](https://api.travis-ci.org/paulhenri-l/laravel-respond-to.svg?branch=master)
+[![PHP Tests](https://github.com/paulhenri-l/laravel-respond-to/actions/workflows/php-tests.yml/badge.svg)](https://github.com/paulhenri-l/laravel-respond-to/actions/workflows/php-tests.yml)
 
 This library will provide you with rails like `respond_to` functionality. This
 feature allows a controller action to return different responses according to
